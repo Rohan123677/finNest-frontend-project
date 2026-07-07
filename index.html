@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinNest - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="header-brand">
+            <button id="menu-toggle" class="menu-btn" aria-label="Toggle Navigation">☰</button>
+            <h1>FinNest</h1>
+        </div>
+        <div class="header-profile">
+            <span class="user-name">Welcome Back</span>
+            
+            <div class="avatar-placeholder" id="profile-trigger" style="cursor: pointer;"></div>
+        </div>
+    </header>
+
+    
+    <div class="profile-card-overlay" id="profile-card-overlay">
+        <div class="profile-card">
+            <button class="profile-close-btn" id="profile-close">&times;</button>
+            <div class="profile-card-header">
+                <div class="large-avatar"></div>
+                <h2>Rohan Kumar</h2>
+                <p class="user-tag">Premium Investor</p>
+            </div>
+            <hr class="profile-divider">
+            <div class="profile-card-body">
+                <div class="profile-info-item">
+                    <span class="info-label">Client ID:</span>
+                    <span class="info-value">FN-2026-9042</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value">rohan@example.com</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="info-label">Risk Profile:</span>
+                    <span class="info-value accent-text">Moderate (Balanced)</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="info-label">Account Status:</span>
+                    <span class="info-value status-active">● Active KYC</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <aside class="app-sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu-list">
+                <li><a href="index.html" class="nav-item dynamic-active-dash"><span class="icon">📊</span> Dashboard</a></li>
+                <li><a href="portfolio.html" class="nav-item dynamic-active-port"><span class="icon">💼</span> Portfolio</a></li>
+                <li><a href="market.html" class="nav-item dynamic-active-mark"><span class="icon">📈</span> Market Watch</a></li>
+                <li><a href="settings.html" class="nav-item dynamic-active-sett"><span class="icon">⚙️</span> Settings</a></li>
+                <!-- NEW: Integrated Sidebar Logout Action Button Container -->
+                <li class="logout-container">
+                    <button id="sidebar-logout-btn" class="logout-btn"><span class="icon">🚪</span> Logout</button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="app-main">
+        <section class="welcome-banner">
+            <h2>Your Wealth Overview</h2>
+            <p>Track your standard allocations and performance dynamically.</p>
+        </section>
+
+        <div class="dashboard-grid">
+            <article class="crypto-card card">
+                <h3>Total Net Worth</h3>
+                <div class="metric-value">₹12,45,000</div>
+                <p class="metric-change positive">▲ +4.2% this week</p>
+            </article>
+
+            <article class="crypto-card card">
+                <h3>Nifty 50 Index</h3>
+                <div class="metric-value">24,315.80</div>
+                <p class="metric-change positive">▲ +0.85% Today</p>
+            </article>
+
+            <article class="chart-card card">
+                <h3>Asset Allocation</h3>
+                <ul class="allocation-list">
+                    <li><span class="dot equity"></span> Equity (60%)</li>
+                    <li><span class="dot debt"></span> Debt (25%)</li>
+                    <li><span class="dot gold"></span> Gold (15%)</li>
+                </ul>
+            </article>
+
+            <article class="table-card card">
+                <h3>Recent Investment History</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transaction-rows">
+                            <tr>
+                                <td><strong>HDFC Bank Ltd</strong></td>
+                                <td>Equity Mutual Fund</td>
+                                <td>₹5,000</td>
+                                <td><span style="color: var(--color-success); font-weight: 600;">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sovereign Gold Bond</strong></td>
+                                <td>Gold RBI</td>
+                                <td>₹12,500</td>
+                                <td><span style="color: var(--color-success); font-weight: 600;">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nippon India Liquid</strong></td>
+                                <td>Debt Fund</td>
+                                <td>₹15,000</td>
+                                <td><span style="color: #f39c12; font-weight: 600;">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reliance Industries</strong></td>
+                                <td>Direct Equity</td>
+                                <td>₹25,000</td>
+                                <td><span style="color: var(--color-success); font-weight: 600;">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tata Motors Ltd</strong></td>
+                                <td>Direct Equity</td>
+                                <td>₹8,200</td>
+                                <td><span style="color: #e74c3c; font-weight: 600;">Failed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 FinNest Dashboard. Built for DecodeLabs Internship Milestone 1.</p>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
