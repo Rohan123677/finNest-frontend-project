@@ -1,0 +1,18 @@
+:root {
+    /* 2025 Warm & Grounded Color Palette Guidelines */
+    --color-mocha: #A5856F;
+    --color-blue: #A0D4E0;
+    --color-grey: #F2F0EA;
+    
+    /* Semantic Color Mapping */
+    --bg-app: var(--color-grey);
+    --bg-surface: #ffffff;
+    --text-primary: #2d2a26;
+    --text-secondary: #6e6963;
+    --border-color: #e3dec3;
+    --color-success: #4caf50;
+    
+    /* Typography Rules (Max 2 Font Families) */
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
